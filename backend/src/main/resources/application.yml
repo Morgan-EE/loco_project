@@ -1,0 +1,141 @@
+server:
+  port: 8090
+spring:
+  config:
+    import: optional:classpath:application-secret.yml
+  thymeleaf:
+    cache: false # 개발 환경에서 템플릿 캐시 비활성화 (실시간 변경 반영)
+    prefix: file:src/main/resources/templates/ # 템플릿 파일 위치 지정, file: 접두사로 실시간 반영
+  output:
+    ansi:
+      enabled: ALWAYS
+  profiles:
+    active: dev
+    include: secret
+  main:
+    allow-bean-definition-overriding: true # RequestLoggingFilter 빈 재정의 허용
+
+  datasource:
+    url: jdbc:mysql://localhost:3308/loco_db
+    username: nenomdeul
+    password: 1234
+    # url: jdbc:h2:./db_dev;MODE=MySQL
+    # username: sa
+    # password:
+    # driver-class-name: org.h2.Driver
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        default_batch_fetch_size: 100
+        format_sql: true
+        highlight_sql: true
+        use_sql_comments: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+    filter:
+      request-logging:
+        include-query-string: true
+        include-client-info: true
+        include-headers: true
+        include-payload: true
+        max-payload-length: 10000 # 요청 페이로드 최대 로깅 길이 (필요에 따라 조정)
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    auth-code-expiration-millis: 180000
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+
+  security:
+    oauth2:
+      client:
+        registration:
+          kakao:
+            client-id: ${KAKAO_CLIENT_ID} # application-secret.yml 에 정의
+            client-name: Kakao
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope:
+              - profile_nickname
+              - profile_image
+              - account_email
+        provider:
+          kakao:
+            authorization-uri: https://kauth.kakao.com/oauth/authorize
+            token-uri: https://kauth.kakao.com/oauth/token
+            user-info-uri: https://kapi.kakao.com/v2/user/me
+            user-name-attribute: id
+
+logging:
+  level:
+    com.likelion.loco: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
+    org.hibernate.orm.jdbc.extract: TRACE
+    org.springframework.transaction.interceptor: TRACE
+    org.springframework.security: DEBUG # 상세 HTTP 요청 로깅 설정 추가
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+
+custom:
+  dev: # dev환경에서의 설정
+    cookieDomain: localhost
+    frontUrl: "http://${custom.dev.cookieDomain}:3000" # {} >> custom:dev:cookieDomain인 "localhost"를 가져오게됨
+    backUrl: "http://${custom.dev.cookieDomain}:${server.port}"
+  prod: # 배포환경에서의 설정 - 구매한 도메인 사용
+    cookieDomain: loco.nenomdeul.site # 서브도메인:2차도메인 (loco.2차도메인), 2차도메인은 구매, 서브도메인은 선택 가능
+    frontUrl: "https://www.${custom.prod.cookieDomain}"
+    backUrl: "https://api.${custom.prod.cookieDomain}"
+  site:
+    name: "LOCO DEV"
+    cookieDomain: "${custom.dev.cookieDomain}"
+    frontUrl: "${custom.dev.frontUrl}"
+    backUrl: "${custom.dev.backUrl}"
+toss: # 토스페이먼츠 파트
+  payments:
+    secret-key: NEED_TO_INPUT # 테스트 키 필요 시 기재 예정
+    success-url: "http://localhost:8090/api/v1/payments/success"
+    fail-url: "http://localhost:8090/api/v1/payments/fail"
+
+#카카오 맵
+kakao:
+  map:
+    javascript-key: ${KAKAO_MAP_JAVASCRIPT_KEY}
+
+# JWT 설정
+jwt:
+  secret: ${JWT_SECRET:your-256-bit-secret-key-here-must-be-at-least-32-characters}
+  expiration: 86400000 # 24시간 (밀리초 단위)
+
+# AWS S3 설정
+cloud:
+  aws:
+    credentials:
+      access-key: ${AWS_ACCESS_KEY}
+      secret-key: ${AWS_SECRET_KEY}
+    region:
+      static: ap-northeast-2
+    s3:
+      bucket: ${AWS_S3_BUCKET}
+    stack:
+      auto: false
+
+# CORS 설정
+app:
+  cors:
+    allowed-origins: http://localhost:3000

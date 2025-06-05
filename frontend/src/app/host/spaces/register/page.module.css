@@ -1,0 +1,72 @@
+.container {
+}
+
+.header {
+  background-color: #7047EB;
+  color: white;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.backButton {
+  margin-right: 0.5rem;
+}
+
+.headerTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  flex: 1;
+  text-align: center;
+}
+
+.spacer {
+  width: 0.5rem;
+}
+
+.content {
+  background-color: white;
+  padding: 0.5rem;
+  margin-top: 0;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: white;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+}
+
+.buttonSecondary {
+  composes: button;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.buttonPrimary {
+  composes: button;
+  background-color: #7047EB;
+  color: white;
+}
+
+.buttonDisabled {
+  composes: button;
+  background-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+} 
