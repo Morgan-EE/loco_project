@@ -135,5 +135,3 @@ java -jar loco_project-0.0.1-SNAPSHOT.jar
 # 7. 회고
 
 ![image](https://github.com/user-attachments/assets/67b338c4-d1bb-42bd-b1e3-76f3bb61aecf)
-
-> > > > > > > 90c2626ff172ba136a4e5171da4fc15544e2778a
