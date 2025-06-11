@@ -108,5 +108,5 @@ java -jar loco_project-0.0.1-SNAPSHOT.jar
 
 # 7. PPT 발표자료
 ![2025-06-12 05 12 44](https://github.com/user-attachments/assets/2efa8cb7-a356-4b7b-a5fb-61fad886018d)
-[LoCo PPT](https://www.canva.com/design/DAGpKIVNJkY/amDRyUoy5Qx72TIUGE5JtA/view?utm_content=DAGpKIVNJkY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3e8c9e5472)
+▶ [LoCo PPT](https://www.canva.com/design/DAGpKIVNJkY/amDRyUoy5Qx72TIUGE5JtA/view?utm_content=DAGpKIVNJkY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3e8c9e5472)
 
