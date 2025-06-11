@@ -104,8 +104,9 @@ java -jar loco_project-0.0.1-SNAPSHOT.jar
 
 # 6. 시연
 ![2025-06-12 05 08 42](https://github.com/user-attachments/assets/ca876f76-b5b9-4b5f-a5f3-889ed2f6fc99)
-▶[LoCo 시연 영상](https://www.youtube.com/watch?v=dQzQO2KjDYg&ab_channel=%EA%B9%80%EB%AA%A8%EA%B1%B4)
+▶ [LoCo 시연 영상](https://www.youtube.com/watch?v=dQzQO2KjDYg&ab_channel=%EA%B9%80%EB%AA%A8%EA%B1%B4)
 
 # 7. PPT 발표자료
+![2025-06-12 05 12 44](https://github.com/user-attachments/assets/2efa8cb7-a356-4b7b-a5fb-61fad886018d)
 [LoCo PPT](https://www.canva.com/design/DAGpKIVNJkY/amDRyUoy5Qx72TIUGE5JtA/view?utm_content=DAGpKIVNJkY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3e8c9e5472)
 
