@@ -58,7 +58,7 @@
 ---
 # 4. 프로젝트 구조도
 ## ERD
-![LoCo_ERD](https://github.com/user-attachments/assets/297c1b43-1876-4416-91b4-410d89a04791)
+![LoCo_ERD](https://github.com/user-attachments/assets/f62874e3-1576-410e-a909-9192e246cf02)
 
 
 ## 아키텍처
