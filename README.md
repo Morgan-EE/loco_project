@@ -105,6 +105,6 @@ java -jar loco_project-0.0.1-SNAPSHOT.jar
 # 6. 시연
 [LoCo 시연 영상](https://www.youtube.com/watch?v=dQzQO2KjDYg&ab_channel=%EA%B9%80%EB%AA%A8%EA%B1%B4)
 
-# 7. PPT
+# 7. PPT 발표자료
 [LoCo PPT](https://www.canva.com/design/DAGpKIVNJkY/amDRyUoy5Qx72TIUGE5JtA/view?utm_content=DAGpKIVNJkY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3e8c9e5472)
 
