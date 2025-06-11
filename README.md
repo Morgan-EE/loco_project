@@ -23,7 +23,7 @@
 7. 회고
 ---
 
-# 1. 💫프로젝트 개요
+# 1. 프로젝트 개요
 - 프로젝트 이름: 로코 (LoCo)
 - 프로젝트 설명: 도심 속 유휴 공간과 이를 필요로 하는 사용자들을 매칭하는 공간 기반 공유 서비스
 
@@ -33,7 +33,7 @@
 
 ---
 
-# 2. 🦁팀원 및 팀 소개
+# 2. 팀원 및 팀 소개
 | 김동규 | 노봉준 | 최종민 | 이호준 |
 |:------:|:------:|:------:|:------:|
 | <img src="https://github.com/user-attachments/assets/85be774d-53a3-4a26-9df4-bdd2a7d2f012" alt="김동규" width="150"> | <img src="https://github.com/user-attachments/assets/3236f1aa-4dd0-412c-9772-2d4b84e5b5e0" alt="노봉준" width="150"> | <img src="https://github.com/user-attachments/assets/d9e5279c-5c88-4c83-8a23-c06f7367a079" alt="최종민" width="150"> | <img src="https://github.com/user-attachments/assets/e2736555-bc1c-487b-9014-571fdce5cfbb" alt="이호준" width="150"> 
@@ -42,7 +42,7 @@
 | [Blog](https://mmatrix.tistory.com/) | [Blog](https://lefton.tistory.com/) | [Blog]() | [Blog]() |
 ---
 
-## 2-1. ☑️작업 분담
+## 2-1. 작업 분담
 |  |  |  |
 |-----------------|-----------------|-----------------|
 | <div align="center">이름</div> | <div align="center">프로필</div> | <div align="center">담당 작업</div> |
@@ -51,7 +51,7 @@
 | <div align="center">최종민</div> | <img src="https://github.com/user-attachments/assets/d9e5279c-5c88-4c83-8a23-c06f7367a079" alt="최종민" width="100"> |<ul><li>결제 담당</li><li>예약 담당</li><li>평점 담당</li></ul> |
 | <div align="center">이호준</div> | <img src="https://github.com/user-attachments/assets/e2736555-bc1c-487b-9014-571fdce5cfbb" alt="이호준" width="100"> | <ul><li>공간 관련 담당 </li><li> 채팅 담당 </li><li> 즐겨찾기 담당 </li></ul> |
 ---
-# 3. 🔩기술 스택
+# 3. 기술 스택
 
 | 분류         | 기술 |
 |--------------|------|
@@ -71,7 +71,7 @@
 
 
 # 5. 실행 방법 (Git Bash 기준)
-## 💡프론트엔드
+## 프론트엔드
 ### frontend 경로 이동
 ```bash
 cd frontend
@@ -85,7 +85,7 @@ npm install
 npm run dev
 ```
 ---
-## 💡백엔드
+## 백엔드
 ### backend 디렉토리에서 빌드 진행
 ```bash
 cd backend
