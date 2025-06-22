@@ -6,9 +6,8 @@ import SockJS from 'sockjs-client';
 import { Client, Message as StompMessage } from '@stomp/stompjs';
 import ChatRoomList from './chatroomlist';
 import ChatRoomComponent from './chatroom';
-import { ChatRoom, ChatRoomData, ChatProps, Message } from '@/types/chat';
+import { ChatRoomData, ChatProps, Message } from '@/types/chat';
 import { formatCurrentTime } from '@/utils/dateUtils';
-import api from '@/lib/axios';
 
 /**
  * 채팅 메인 컴포넌트
@@ -355,4 +354,4 @@ const Chat: React.FC<ChatProps> = ({ initialChatRooms = [], currentUserId }) => 
   );
 };
 
-export default Chat; 
+export default Chat;
